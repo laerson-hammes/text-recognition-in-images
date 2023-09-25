@@ -10,7 +10,7 @@ import os
 
 
 IMAGE_TEMP_DIRECTORY: str = "C:\\Windows\\Temp\\download.png"
-pytesseract.pytesseract.tesseract_cmd = "C:\\Users\\Laerson\\AppData\\Local\\Programs\\Tesseract-OCR\\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd = f"C:\\Users\\{os.getlogin()}\\AppData\\Local\\Programs\\Tesseract-OCR\\tesseract.exe"
 
 
 class TextRecognize(object):
@@ -42,7 +42,7 @@ class TextRecognize(object):
          r = requests.get(url)
          self.image_content = r.content
          return True
-      except:
+      except Exception as _:
          return False
       
    

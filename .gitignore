@@ -4,6 +4,7 @@ __pycache__/
 
 # Environments
 env/
+.eggs/
 
 # mypy
 .mypy_cache/
